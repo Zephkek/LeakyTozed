@@ -8,9 +8,6 @@
 | **Affected Product** | TOZED ZLT W51 Router |
 | **Affected Version** | Firmware up to 1.4.2 |
 
-> **Important Note:** Due to the proprietary nature of the firmware, the exact internal implementation details are unknown. This analysis is based on observed behavior and black-box testing.
-
-
 ## 2. Executive Summary
 
 Critical security vulnerabilities exist in the proprietary service (TCP port 7777) of TOZED ZLT W51 routers:
@@ -95,6 +92,9 @@ An unauthenticated attacker can exploit these vulnerabilities without any creden
 |---|---|---|
 | **CWE-244** | Improper Clearing of Heap Memory Before Release | Memory buffers are not cleared between connections |
 | **CWE-200** | Exposure of Sensitive Information to an Unauthorized Actor | Previous connection data leaks to new clients |
+
+> **Important Note:** Due to the proprietary nature of the firmware, the exact internal implementation details are unknown. This analysis is based on observed behavior and black-box testing.
+
 
 ## 6. Mitigations
 
