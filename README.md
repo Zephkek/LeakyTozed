@@ -8,6 +8,9 @@
 | **Affected Product** | TOZED ZLT W51 Router |
 | **Affected Version** | Firmware up to 1.4.2 |
 
+> **Important Note:** Due to the proprietary nature of the firmware, the exact internal implementation details are unknown. This analysis is based on observed behavior and black-box testing.
+
+
 ## 2. Executive Summary
 
 Critical security vulnerabilities exist in the proprietary service (TCP port 7777) of TOZED ZLT W51 routers:
