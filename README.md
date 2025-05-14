@@ -24,7 +24,7 @@ Critical security vulnerabilities exist in the proprietary service (TCP port 777
 
 ### 3.1. Cross-Connection Memory Disclosure
 
-When a client disconnects, server-side buffers aren't properly sanitized. Subsequent connections receive fragments of previous clients' data (usernames, passwords, tokens).
+When a client disconnects, server-side buffers aren't properly sanitized. Subsequent connections receive fragments of previous clients' data.
 
 **Leak Mechanism:**
 1. Attacker sends specially crafted version bytes:
