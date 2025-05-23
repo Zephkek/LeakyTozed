@@ -1,12 +1,13 @@
-# TOZED ZLT W51 Router Security Vulnerabilities
+# TOZED ZLT W51 Router Heap Inspection (CVE-2025-5105)
 
 ## 1. Basic Information
 
 | Field | Value |
 |---|---|
-| **Vulnerability Type** | Information Disclosure, Memory Corruption , Denial of Service |
+| **CVE ID** | CVE-2025-5105 |
+| **Vulnerability Type** | Heap Inspection |
 | **Affected Product** | TOZED ZLT W51 Router |
-| **Affected Version** | Firmware up to 1.4.2 |
+| **Affected Version** | Firmware 1.4.2 |
 
 ## 2. Executive Summary
 
@@ -90,8 +91,7 @@ An unauthenticated attacker can exploit these vulnerabilities without any creden
 
 | CWE ID | Name | Description |
 |---|---|---|
-| **CWE-244** | Improper Clearing of Heap Memory Before Release | Memory buffers are not cleared between connections |
-| **CWE-200** | Exposure of Sensitive Information to an Unauthorized Actor | Previous connection data leaks to new clients |
+| **CWE-244** | Improper Clearing of Heap Memory Before Release | Using realloc() to resize buffers that store sensitive information leaves the sensitive information exposed to attack, because it is not removed from memory |
 
 > **Important Note:** Due to the proprietary nature of the firmware, the exact internal implementation details are unknown. This analysis is based on observed behavior and black-box testing.
 
@@ -107,6 +107,8 @@ An unauthenticated attacker can exploit these vulnerabilities without any creden
 **Discovery:** 2025-04-10
 
 **CNA Report Date:** 2025-05-01
+
+**CVE Assignment:** 2025-05-23
 
 ## 8. Credits
 
